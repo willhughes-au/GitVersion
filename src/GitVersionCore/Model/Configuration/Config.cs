@@ -35,6 +35,24 @@ namespace GitVersion.Model.Configuration
         [YamlMember(Alias = "assembly-file-versioning-format")]
         public string AssemblyFileVersioningFormat { get; set; }
 
+        [YamlMember(Alias = "semver-versioning-format")]
+        public string SemVerVersioningFormat { get; set; }
+
+        [YamlMember(Alias = "legacy-semver-versioning-format")]
+        public string LegacySemVerVersioningFormat { get; set; }
+
+        [YamlMember(Alias = "legacy-semver-padded-versioning-format")]
+        public string LegacySemVerPaddedVersioningFormat { get; set; }
+
+        [YamlMember(Alias = "full-semver-versioning-format")]
+        public string FullSemVerVersioningFormat { get; set; }
+
+        [YamlMember(Alias = "nuget-versioning-format")]
+        public string NuGetVersionVersioningFormat { get; set; }
+
+        [YamlMember(Alias = "nuget-v2-versioning-format")]
+        public string NuGetVersionV2VersioningFormat { get; set; }
+
         [YamlMember(Alias = "mode")]
         public VersioningMode? VersioningMode { get; set; }
 

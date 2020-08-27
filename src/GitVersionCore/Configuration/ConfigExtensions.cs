@@ -86,6 +86,12 @@ namespace GitVersion.Configuration
             var assemblyInformationalFormat = configuration.AssemblyInformationalFormat;
             var assemblyVersioningFormat = configuration.AssemblyVersioningFormat;
             var assemblyFileVersioningFormat = configuration.AssemblyFileVersioningFormat;
+            var semVerVersioningFormat = configuration.SemVerVersioningFormat;
+            var legacySemVerVersioningFormat = configuration.LegacySemVerVersioningFormat;
+            var legacySemVerPaddedVersioningFormat = configuration.LegacySemVerPaddedVersioningFormat;
+            var fullSemVerVersioningFormat = configuration.FullSemVerVersioningFormat;
+            var nuGetVersionVersioningFormat = configuration.NuGetVersionVersioningFormat;
+            var nuGetVersionV2VersioningFormat = configuration.NuGetVersionV2VersioningFormat;
             var gitTagPrefix = configuration.TagPrefix;
             var majorMessage = configuration.MajorVersionBumpMessage;
             var minorMessage = configuration.MinorVersionBumpMessage;
@@ -97,7 +103,14 @@ namespace GitVersion.Configuration
 
             var commitMessageVersionBump = currentBranchConfig.CommitMessageIncrementing ?? configuration.CommitMessageIncrementing.Value;
             return new EffectiveConfiguration(
-                assemblyVersioningScheme, assemblyFileVersioningScheme, assemblyInformationalFormat, assemblyVersioningFormat, assemblyFileVersioningFormat, versioningMode, gitTagPrefix,
+                assemblyVersioningScheme, assemblyFileVersioningScheme, assemblyInformationalFormat, assemblyVersioningFormat, assemblyFileVersioningFormat,
+                semVerVersioningFormat,
+                legacySemVerVersioningFormat,
+                legacySemVerPaddedVersioningFormat,
+                fullSemVerVersioningFormat,
+                nuGetVersionVersioningFormat,
+                nuGetVersionV2VersioningFormat,
+                versioningMode, gitTagPrefix,
                 tag, nextVersion, incrementStrategy,
                 currentBranchConfig.Regex,
                 preventIncrementForMergedBranchVersion,

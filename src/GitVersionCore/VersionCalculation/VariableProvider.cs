@@ -62,6 +62,14 @@ namespace GitVersion.VersionCalculation
 
             var assemblySemVer = CheckAndFormatString(config.AssemblyVersioningFormat, semverFormatValues, semverFormatValues.AssemblySemVer, "AssemblyVersioningFormat");
 
+
+            var semver = CheckAndFormatString(config.SemVerVersioningFormat, semverFormatValues, semverFormatValues.SemVer, "SemVerVersioningFormat");
+            var legacySemVer = CheckAndFormatString(config.LegacySemVerVersioningFormat, semverFormatValues, semverFormatValues.LegacySemVer, "LegacySemVerVersioningFormat");
+            var legacySemVerPadded = CheckAndFormatString(config.LegacySemVerPaddedVersioningFormat, semverFormatValues, semverFormatValues.LegacySemVerPadded, "LegacySemVerPaddedVersioningFormat");
+            var fullSemVer = CheckAndFormatString(config.FullSemVerVersioningFormat, semverFormatValues, semverFormatValues.FullSemVer, "FullSemVerVersioningFormat");
+            var nuGetVersion = CheckAndFormatString(config.NuGetVersionVersioningFormat, semverFormatValues, semverFormatValues.NuGetVersion, "NuGetVersionVersioningFormat");
+            var nuGetVersionV2 = CheckAndFormatString(config.NuGetVersionV2VersioningFormat, semverFormatValues, semverFormatValues.NuGetVersionV2, "NuGetVersionV2VersioningFormat");
+
             var variables = new VersionVariables(
                 semverFormatValues.Major,
                 semverFormatValues.Minor,
@@ -74,10 +82,10 @@ namespace GitVersion.VersionCalculation
                 semverFormatValues.Sha,
                 semverFormatValues.ShortSha,
                 semverFormatValues.MajorMinorPatch,
-                semverFormatValues.SemVer,
-                semverFormatValues.LegacySemVer,
-                semverFormatValues.LegacySemVerPadded,
-                semverFormatValues.FullSemVer,
+                semver,
+                legacySemVer,
+                legacySemVerPadded,
+                fullSemVer,
                 assemblySemVer,
                 assemblyFileSemVer,
                 semverFormatValues.PreReleaseTag,
@@ -87,8 +95,8 @@ namespace GitVersion.VersionCalculation
                 semverFormatValues.WeightedPreReleaseNumber,
                 informationalVersion,
                 semverFormatValues.CommitDate,
-                semverFormatValues.NuGetVersion,
-                semverFormatValues.NuGetVersionV2,
+                nuGetVersion,
+                nuGetVersionV2,
                 semverFormatValues.NuGetPreReleaseTag,
                 semverFormatValues.NuGetPreReleaseTagV2,
                 semverFormatValues.VersionSourceSha,

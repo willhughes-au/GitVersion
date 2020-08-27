@@ -42,6 +42,12 @@ next-version: 1.0
 assembly-versioning-scheme: MajorMinorPatch
 assembly-file-versioning-scheme: MajorMinorPatchTag
 assembly-informational-format: '{InformationalVersion}'
+semver-versioning-format: 'TBC'
+legacy-semver-versioning-format: 'TBC'
+legacy-semver-padded-versioning-format: 'TBC'
+full-semver-versioning-format: 'TBC'
+nuget-versioning-format: 'TBC'
+nuget-v2-versioning-format: 'TBC'
 mode: ContinuousDelivery
 increment: Inherit
 continuous-delivery-fallback-tag: ci
@@ -115,6 +121,32 @@ Follows the same formatting semantics as `assembly-file-versioning-format`.
 Specifies the format of `AssemblyInformationalVersion`.
 Follows the same formatting semantics as `assembly-file-versioning-format`.
 The default value is `{InformationalVersion}`.
+
+### semver-versioning-format
+Specifies the format of `SemVerVersioningFormat`.
+Follows the same formatting semantics as `assembly-file-versioning-format`. 
+
+### legacy-semver-versioning-format
+Specifies the format of `LegacySemVerVersioningFormat`.
+Follows the same formatting semantics as `assembly-file-versioning-format`.
+
+### legacy-semver-padded-versioning-format
+Specifies the format of `LegacySemVerPaddedVersioningFormat`.
+Follows the same formatting semantics as `assembly-file-versioning-format`.
+
+### full-semver-versioning-format
+Specifies the format of `FullSemVerVersioningFormat`.
+Follows the same formatting semantics as `assembly-file-versioning-format`.
+
+### nuget-versioning-format
+Specifies the format of `NuGetVersionVersioningFormat`.
+Follows the same formatting semantics as `assembly-file-versioning-format`.
+
+### nuget-v2-versioning-format
+Specifies the format of `NuGetVersionV2VersioningFormat`.
+Follows the same formatting semantics as `assembly-file-versioning-format`.
+
+
 
 ### mode
 

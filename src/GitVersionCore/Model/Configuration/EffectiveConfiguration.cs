@@ -15,6 +15,12 @@ namespace GitVersion.Model.Configuration
             string assemblyInformationalFormat,
             string assemblyVersioningFormat,
             string assemblyFileVersioningFormat,
+            string semVerVersioningFormat,
+            string legacySemVerVersioningFormat,
+            string legacySemVerPaddedVersioningFormat,
+            string fullSemVerVersioningFormat,
+            string nuGetVersionVersioningFormat,
+            string nuGetVersionV2VersioningFormat,
             VersioningMode versioningMode, string gitTagPrefix,
             string tag, string nextVersion, IncrementStrategy increment,
             string branchPrefixToTrim,
@@ -43,6 +49,12 @@ namespace GitVersion.Model.Configuration
             AssemblyInformationalFormat = assemblyInformationalFormat;
             AssemblyVersioningFormat = assemblyVersioningFormat;
             AssemblyFileVersioningFormat = assemblyFileVersioningFormat;
+            SemVerVersioningFormat = semVerVersioningFormat;
+            LegacySemVerVersioningFormat = legacySemVerVersioningFormat;
+            LegacySemVerPaddedVersioningFormat = legacySemVerPaddedVersioningFormat;
+            FullSemVerVersioningFormat = fullSemVerVersioningFormat;
+            NuGetVersionVersioningFormat = nuGetVersionVersioningFormat;
+            NuGetVersionV2VersioningFormat = nuGetVersionV2VersioningFormat;
             VersioningMode = versioningMode;
             GitTagPrefix = gitTagPrefix;
             Tag = tag;
@@ -80,6 +92,12 @@ namespace GitVersion.Model.Configuration
         public string AssemblyInformationalFormat { get; private set; }
         public string AssemblyVersioningFormat { get; private set; }
         public string AssemblyFileVersioningFormat { get; private set; }
+        public string SemVerVersioningFormat { get; private set; }
+        public string LegacySemVerVersioningFormat { get; private set; }
+        public string LegacySemVerPaddedVersioningFormat { get; private set; }
+        public string FullSemVerVersioningFormat { get; private set; }
+        public string NuGetVersionVersioningFormat { get; private set; }
+        public string NuGetVersionV2VersioningFormat { get; private set; }
 
         /// <summary>
         /// Git tag prefix

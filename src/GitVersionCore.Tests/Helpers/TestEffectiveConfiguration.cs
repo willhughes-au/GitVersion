@@ -15,6 +15,12 @@ namespace GitVersionCore.Tests.Helpers
             string assemblyVersioningFormat = null,
             string assemblyFileVersioningFormat = null,
             string assemblyInformationalFormat = null,
+            string semVerVersioningFormat = null,
+            string legacySemVerVersioningFormat = null,
+            string legacySemVerPaddedVersioningFormat = null,
+            string fullSemVerVersioningFormat = null,
+            string nuGetVersionVersioningFormat = null,
+            string nuGetVersionV2VersioningFormat = null,
             VersioningMode versioningMode = VersioningMode.ContinuousDelivery,
             string gitTagPrefix = "v",
             string tag = "",
@@ -37,13 +43,20 @@ namespace GitVersionCore.Tests.Helpers
             bool isRelease = false,
             string commitDateFormat = "yyyy-MM-dd",
             bool updateBuildNumber = false) :
-            base(assemblyVersioningScheme, assemblyFileVersioningScheme, assemblyInformationalFormat, assemblyVersioningFormat, assemblyFileVersioningFormat, versioningMode, gitTagPrefix, tag, nextVersion, IncrementStrategy.Patch,
-                    branchPrefixToTrim, preventIncrementForMergedBranchVersion, tagNumberPattern, continuousDeploymentFallbackTag,
-                    trackMergeTarget,
-                    majorMessage, minorMessage, patchMessage, noBumpMessage,
-                    commitMessageMode, legacySemVerPadding, buildMetaDataPadding, commitsSinceVersionSourcePadding,
-                    versionFilters ?? Enumerable.Empty<IVersionFilter>(),
-                    tracksReleaseBranches, isRelease, commitDateFormat, updateBuildNumber, 0, 0)
+            base(assemblyVersioningScheme, assemblyFileVersioningScheme, assemblyInformationalFormat, assemblyVersioningFormat, assemblyFileVersioningFormat,
+                semVerVersioningFormat,
+                legacySemVerVersioningFormat,
+                legacySemVerPaddedVersioningFormat,
+                fullSemVerVersioningFormat,
+                nuGetVersionVersioningFormat,
+                nuGetVersionV2VersioningFormat,
+                versioningMode, gitTagPrefix, tag, nextVersion, IncrementStrategy.Patch,
+                branchPrefixToTrim, preventIncrementForMergedBranchVersion, tagNumberPattern, continuousDeploymentFallbackTag,
+                trackMergeTarget,
+                majorMessage, minorMessage, patchMessage, noBumpMessage,
+                commitMessageMode, legacySemVerPadding, buildMetaDataPadding, commitsSinceVersionSourcePadding,
+                versionFilters ?? Enumerable.Empty<IVersionFilter>(),
+                tracksReleaseBranches, isRelease, commitDateFormat, updateBuildNumber, 0, 0)
         {
         }
     }
