@@ -45,6 +45,12 @@ namespace GitVersion.Configuration
             targetConfig.AssemblyInformationalFormat = overrideConfig.AssemblyInformationalFormat ?? targetConfig.AssemblyInformationalFormat;
             targetConfig.AssemblyVersioningFormat = overrideConfig.AssemblyVersioningFormat ?? targetConfig.AssemblyVersioningFormat;
             targetConfig.AssemblyFileVersioningFormat = overrideConfig.AssemblyFileVersioningFormat ?? targetConfig.AssemblyFileVersioningFormat;
+            targetConfig.SemVerVersioningFormat = overrideConfig.SemVerVersioningFormat ?? targetConfig.SemVerVersioningFormat;
+            targetConfig.LegacySemVerVersioningFormat = overrideConfig.LegacySemVerVersioningFormat ?? targetConfig.LegacySemVerVersioningFormat;
+            targetConfig.LegacySemVerPaddedVersioningFormat = overrideConfig.LegacySemVerPaddedVersioningFormat ?? targetConfig.LegacySemVerPaddedVersioningFormat;
+            targetConfig.FullSemVerVersioningFormat = overrideConfig.FullSemVerVersioningFormat ?? targetConfig.FullSemVerVersioningFormat;
+            targetConfig.NuGetVersionVersioningFormat = overrideConfig.NuGetVersionVersioningFormat ?? targetConfig.NuGetVersionVersioningFormat;
+            targetConfig.NuGetVersionV2VersioningFormat = overrideConfig.NuGetVersionV2VersioningFormat ?? targetConfig.NuGetVersionV2VersioningFormat;
             targetConfig.VersioningMode = overrideConfig.VersioningMode ?? targetConfig.VersioningMode;
             targetConfig.TagPrefix = overrideConfig.TagPrefix ?? targetConfig.TagPrefix;
             targetConfig.ContinuousDeploymentFallbackTag = overrideConfig.ContinuousDeploymentFallbackTag ?? targetConfig.ContinuousDeploymentFallbackTag;
